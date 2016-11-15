@@ -65,4 +65,4 @@ src_list.sort()
 dst_list = [os.path.join(dst_dir, file[file.rfind(os.path.sep) + 1:]) for file in src_list]
 
 for src_file, dst_file in tqdm(zip(src_list, dst_list)):
-    downsampleWav(src_file, dst_file, inrate=44100, outrate=16000, inchannels=2, outchannels=2)
+    downsampleWav(src_file, dst_file, inrate=44100, outrate=16000, inchannels=2, outchannels=1)
