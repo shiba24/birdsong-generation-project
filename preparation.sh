@@ -30,10 +30,11 @@ pip install --user tqdm
 
 ### resampling data
 mkdir corpus
+python resample.py -s data -d corpus/
 
 
+### clone tensorflow and install dependencies
 git clone https://github.com/ibab/tensorflow-wavenet.git
-go get github.com/prasmussen/gdrive
 cd tensorflow-wavenet
 pip install --user -r requirements.txt
 cd ..
