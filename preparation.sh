@@ -18,11 +18,18 @@ skicka -no-browser-auth ls
 
 ### downlaod data
 cd birdsong-generation-project/
-mkdir corpus
-skicka download java_song corpus/
+mkdir data
+skicka download java_song data/
 
 
 ### install dependencies for wave resample
+sudo pip install --upgrade pip
+pip install --user argparse
+pip install --user tqdm
+
+
+### resampling data
+mkdir corpus
 
 
 git clone https://github.com/ibab/tensorflow-wavenet.git

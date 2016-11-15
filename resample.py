@@ -2,7 +2,7 @@ import os
 import wave
 import audioop
 import argparse
-from tqdm import tqdm
+import globfrom tqdm import tqdm
 
 
 def downsampleWav(src, dst, inrate=44100, outrate=16000, inchannels=2, outchannels=1):
@@ -58,7 +58,7 @@ args = parser.parse_args()
 src_dir = args.srcdir
 dst_dir = args.dstdir
 
-src_list = glog.glob(os.pat.join(src_dir, '.wav'))
+src_list = glob.glob(os.pat.join(src_dir, '.wav'))
 src_list.sort()
 
 dst_list = [os.path.join(dst_dir, file[file.rfind(os.path.sep) + 1:]) for file in src_list]
