@@ -40,7 +40,7 @@ def readWave(wavefile):
     return np.array(channels), sample_rate, sample_width
  
 
- def resample(in_wav, in_rate, sample_width, out_file, out_rate, out_channel=1):
+def resample(in_wav, in_rate, sample_width, out_file, out_rate, out_channel=1):
     if len(in_wav.shape) > 1:
         in_sample = len(in_wav[0])
         in_wav = in_wav[0]
