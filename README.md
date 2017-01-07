@@ -31,11 +31,11 @@ python train.py --data_dir=../corpus
 Songbird is one of the most popular model animal for the studies of human language, vocalization, and auditory prcessing. Many laboratories around the world (actually many top universities in the US have songbird lab) in neurosciene including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
 
 
-## Background: brief research summary
+## Background: brief summary of previous research
 
 ### Song structure
 
-***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (syllable or note).
+***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (called _syllable_ or _note_).
 
 (figure)
 
@@ -50,7 +50,7 @@ This is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature 
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px">
 
-We can see there is brain part called HVC, pre-motor area. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to RA, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling the birdsong and its neural mechanism.
+We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to _RA_, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling the birdsong and its neural mechanism.
 
 (figure)
 

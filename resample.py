@@ -48,21 +48,21 @@ def downsampleWav(src, dst, inrate=44100, outrate=16000, inchannels=2, outchanne
 
     return True
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Resample .wav files from 44.1 kHz to 16 kHz.')
+    parser.add_argument('--srcdir', '-s', default='', type=str,
+                        help='Source data directory')
+    parser.add_argument('--dstdir', '-d', default='./corpus', type=str,
+                        help='Destination data directory')
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser(description='Resample .wav files from 44.1 kHz to 16 kHz.')
-parser.add_argument('--srcdir', '-s', default='', type=str,
-                    help='Source data directory')
-parser.add_argument('--dstdir', '-d', default='./corpus', type=str,
-                    help='Destination data directory')
-args = parser.parse_args()
+    src_dir = args.srcdir
+    dst_dir = args.dstdir
 
-src_dir = args.srcdir
-dst_dir = args.dstdir
+    src_list = glob.glob(os.path.join(src_dir, '*.wav'))
+    src_list.sort()
+    dst_list = [os.path.join(dst_dir, file[file.rfind(os.path.sep) + 1:]) for file in src_list]
 
-src_list = glob.glob(os.path.join(src_dir, '*.wav'))
-src_list.sort()
-
-dst_list = [os.path.join(dst_dir, file[file.rfind(os.path.sep) + 1:]) for file in src_list]
-
-for src_file, dst_file in tqdm(zip(src_list, dst_list)):
-    downsampleWav(src_file, dst_file, inrate=44100, outrate=16000, inchannels=2, outchannels=1)
+    for src_file, dst_file in tqdm(zip(src_list, dst_list)):
+        downsampleWav(src_file, dst_file,
+                      inrate=44100, outrate=16000, inchannels=2, outchannels=1)
