@@ -11,6 +11,8 @@ Birdsong generation project
 ## Requirements
 
 - golang 1.7.3+
+- python 2.7.11
+- [wavenet-tensorflow](https://github.com/ibab/tensorflow-wavenet) (installed in the script)
 
 
 ## Preparetion

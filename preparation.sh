@@ -24,7 +24,7 @@ skicka download java_song data/
 
 
 ### install dependencies for wave resample
-sudo pip install --upgrade pip
+pip install --user --upgrade pip
 pip install --user -r requirements.txt
 
 
