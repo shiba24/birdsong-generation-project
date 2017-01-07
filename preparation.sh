@@ -2,12 +2,13 @@
 wget https://storage.googleapis.com/golang/go1.7.3.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
-mkdir ~/go
-mkdir ~/go/bin
+# mkdir ~/go
+# mkdir ~/go/bin
 mkdir ~/work
 # export GOROOT=$HOME/go
 # export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/work
+export PATH=$PATH:$GOPATH/bin
 
 
 ### skicka installation
@@ -29,13 +30,12 @@ pip install --user -r requirements.txt
 
 ### resampling data
 mkdir corpus
-python resample.py -s data -d corpus/
+python resample.py -s data -d corpus
 
 
 ### clone tensorflow and install dependencies
 git clone https://github.com/ibab/tensorflow-wavenet.git
 cd tensorflow-wavenet
 pip install --user -r requirements.txt
-cd ..
 
 

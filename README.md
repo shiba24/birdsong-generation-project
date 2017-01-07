@@ -1,12 +1,16 @@
 Birdsong generation project
 ====
 
+# Notice
 
-# Quick command 
+[WIP] The dataset is not open-access yet. Hense you cannot replicate this project on your own.
 
-## Notice
 
-The dataset is not open-access yet. Hense you cannot replicate this project on your own.
+# Quick execution
+
+## Requirements
+
+- golang 1.7.3+
 
 
 ## Preparetion
