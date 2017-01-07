@@ -50,7 +50,7 @@ This is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature 
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px">
 
-We can see there is brain part called HVC. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. There are many studies for modelling the birdsong and its neural mechanism.
+We can see there is brain part called HVC, pre-motor area. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to RA, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling the birdsong and its neural mechanism.
 
 (figure)
 
