@@ -31,21 +31,42 @@ python train.py --data_dir=../corpus
 Songbird is one of the most popular model animal for the studies of human language, vocalization, and auditory prcessing. Many laboratories around the world (actually many top universities in the US have songbird lab) in neurosciene including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
 
 
+## Background: brief research summary
 
-## Brief previous research summary
+### Song structure
+
+***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (syllable or note).
+
+(figure)
+
+And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic.
+
+(figure)
 
 
+### Brain structure
+
+This is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature Rev. Neurosci.](http://www.nature.com/nrn/journal/v11/n11/execsumm/nrn2931.html)). The more detailed brain circuitry can be seen [here](http://web.williams.edu/Biology/Faculty_Staff/hwilliams/Finches/circuits.html) for example. 
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px">
+
+We can see there is brain part called HVC. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. There are many studies for modelling the birdsong and its neural mechanism.
+
+(figure)
 
 
 ## This project
 
-This project is only my own (not belonging to my supervisor), using WaveNet to simulate bird song.
+This project is only my own (not belonging to my supervisor). In one sentence: ***using WaveNet to simulate bird song.***
 
 As mentioned above, bird song itself is thought to have Markov-Model structure and syntax like human speech. However, song itself has no semantics.
 
 If the mechanism should be similar between such birds and humans, WaveNet might be successful for simulating birdsong, because it is succssful in generating completely meaningless but locally speech-like sound waveform.
 
 And if it succeed, the next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
+
+
+## Result
 
 
 
