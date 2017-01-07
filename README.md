@@ -61,20 +61,13 @@ This project is only my own (not belonging to my supervisor). In one sentence: *
 
 As mentioned above, bird song itself is thought to have Markov-Model structure and syntax like human speech. However, song itself has no semantics.
 
-If the mechanism should be similar between such birds and humans, WaveNet might be successful for simulating birdsong, because it is succssful in generating completely meaningless but locally speech-like sound waveform.
+If the mechanism should be similar between such birds and humans, WaveNet ([original blog](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) and [implementation of tensorflow](https://github.com/ibab/tensorflow-wavenet)) might be successful for simulating birdsong, because it is succssful in generating completely meaningless but locally speech-like sound waveform.
 
 And if it succeed, the next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
 
 
 ## Result
 
-
-
-
-# Supplementary infomation
-
-
-## Songbird Laboratories
 
 
 
