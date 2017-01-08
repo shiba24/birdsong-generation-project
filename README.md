@@ -3,7 +3,9 @@ Birdsong generation project
 
 # Notice
 
-This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
+ - This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
+
+ - This project is only my own, not belonging to my supervisor. All the mistakes and misunderstandings belong to myself.
 
 
 ## Table of Contents
@@ -14,6 +16,8 @@ This project is work-in-process. The dataset is not open-access yet. Hense you c
      - [Abstract](https://github.com/shiba24/birdsong-generation-project#abstract-in-one-sentence)
      - [Background](https://github.com/shiba24/birdsong-generation-project#background)
      - [About this project](https://github.com/shiba24/birdsong-generation-project#this-project)
+     - [Why is this interesting?](https://github.com/shiba24/birdsong-generation-project#why-is-this-interesting?)
+     - [Model configuration](https://github.com/shiba24/birdsong-generation-project#model-configuration)
      - [Result](https://github.com/shiba24/birdsong-generation-project#result)
      - [Discussion](https://github.com/shiba24/birdsong-generation-project#discussion)
  - [Copyright](https://github.com/shiba24/birdsong-generation-project#copyright)
@@ -42,8 +46,14 @@ python train.py --data_dir=../corpus
 
 # generation
 cd tensorflow-wavenet
-ython generate.py --wav_out_path=generated.wav --samples 32000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
+ython generate.py --wav_out_path=generated.wav --samples 80000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
 ```
+
+
+## Result: generated song
+
+You can listen to generated song [here](https://soundcloud.com/shintaro-shiba/generated-bird-song-2).
+
 
 # Overview
 
@@ -51,25 +61,24 @@ ython generate.py --wav_out_path=generated.wav --samples 32000 logdir/train/{DAT
 
 Simulate bird song with WaveNet.
 
-## Why birdsong?
-
-Songbird is one of the most popular model animal for the neuroscientific studies of human language, vocalization, and auditory prcessing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
-
-
 ## Background
+
+### What is songbird?
+
+_Songbird_ is one of the best model animals for the neuroscientific studies of human language, vocalization, and auditory prcessing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to solve the question: _why only humans have language?_ and _what is the neural mechanism of language?_.
 
 ### Song structure
 
-***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (called _syllable_ or _note_).
+***Bird song*** is considered to have syntax like human language. Below is typical song structure of songbirds. We can see a bout of several song elements (called _syllable_ or _note_).
 
-You can listen to an example of sparrow's song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of song.
+You can listen to an example of java sparrow's (文鳥) song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of zebra finch's (錦華鳥) song. Alphabets on the spectrogram represent type of _note_. Both of java sparrow and zebra finch are songbirds.
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png" > 
-
-
-And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language.[Berwick et al, 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039). Figures below explain song and its expression as finite-state.
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png"> 
+
+
+And interestingly, ***the song structure is expressed as finite-state model***. The transition of _notes_ are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language ([Berwick et al., 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).) This is song expression as finite-state transition diagram. Line thickness represents the probability of transition from _note_ to _note_.
+
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" > 
 
@@ -78,24 +87,33 @@ And interestingly, ***the song structure is expressed as Markov model***. The tr
 
 ### Brain structure
 
+
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px" align="right">
 
-This figure is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature Rev. Neurosci.](http://www.nature.com/nrn/journal/v11/n11/execsumm/nrn2931.html)). The more detailed brain circuitry can be seen [here](http://web.williams.edu/Biology/Faculty_Staff/hwilliams/Finches/circuits.html) for example. 
 
-We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC are firing in turn like _chain_.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to _RA_, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling (even using neural network!) the birdsong and its neural mechanism. (For example, [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y))
+Many researchers approached what is the neural mechanism enabling finite-state vocalization. And one hypothesis is _Markov chain-like representation_ within neurons in the motor areas.
+The right figure is neural pathway of _vocalization_ (cited from [Bouhuis et al., 2010](http://www.nature.com/nrn/journal/v11/n11/execsumm/nrn2931.html)). The more detailed brain circuitry including _audition_ can be seen [here](http://web.williams.edu/Biology/Faculty_Staff/hwilliams/Finches/circuits.html) for example. 
+
+We can see there is a brain region named _HVC_ (proper name), which is _pre-motor area_. Many neurons show activity phase-locked to the song. _HVC_ neurons are projecting to _RA_ (robust nucleus of arcopallium), which is _motor area_, and _RA_ outputs motor signal to mustles of vocal organ for the generation of song element.
+
+The next figure (a) is another expression of finite-state transition of song. And (b) is a simple model of _HVC_ and _RA_ neurons. The hypothesis assumes ***neurons in HVC are firing in turn like _chain_.*** (Cited from [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y))
+
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song_and_brain.png">
 
-(Figure cited from [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y), Fig. 1.)
+
+There are many studies for modelling (even using neural network) the birdsong and its neural mechanism.
 
 
 ### WaveNet
 
+
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/wavenet.gif" width="400px" align="right">
 
-WaveNet is generative neural network for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) is published by Google DeepMind team in 2016. It uses dilated convolutional neural network to generate audio wave. (GIf image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
 
-Inputs and outputs for the model are only wave. This model itself does ***NOT*** assume that the syllables expressed with Markov model.
+***WaveNet*** is generative neural network model for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) was published by Google DeepMind team in 2016. It uses _dilated convolutional neural network_ to generate audio wave. (Gif image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
+
+Inputs and outputs for the model are only waveform. **Hence this model itself does NOT assume that the syllables expressed with finite state, nor Markov chain.***
 
 
 ## This project
@@ -109,13 +127,24 @@ As mentioned above, bird song itself is thought to have Markov-Model structure a
 If the mechanism should be similar between such birds and humans, WaveNet ([original blog](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) and [implementation of tensorflow](https://github.com/ibab/tensorflow-wavenet)) might be successful for simulating birdsong, because it is succssful in generating completely meaningless but locally speech-like sound waveform.
 
 
-### A bit detailed settings
+## Why is this interesting?
+
+WaveNet itself doesn't use Markov property of song. It only uses information of raw waveform. Therefore, ***if WaveNet succeeds in generating birdsong:***
+
+ 1. WaveNet might have an ability to embed Markov property. This is not proved explicitly if we only generate human speech with this model.
+
+ 2. Representation obtained by trained model (i.e. activation pattern of _neurons_ in the model) might be comparable with neural representation in actual brain of songbird.
+
+ 3. Similaity between human speech and birdsong as syntax could be further supported.
+
+
+## Model configuration
 
 <dl>
   <dt>Datasize</dt>
   <dd>??</dd>
   <dt>Sampling rate</dt>
-  <dd>1.6 kHz</dd>
+  <dd>and</dd>
   <dt>Other settings</dt>
   <dd>will be here</dd>
 </dl>
@@ -129,21 +158,36 @@ After 2500 epoch, loss is about 1.5~2.0.
 
 ### Generated sound
 
+[Listen to natural song at soundcloud](https://soundcloud.com/shintaro-shiba/javasong)
+
 [Listen to generated song at soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2)
 
-It is really like original (natural) song!! This is visualized image, or spectrogram, of song. (It tells us that the wave sound is a bit chattering, though.)
+It sounds like original (natural) song!! This is visualized image, or spectrogram, of song. (It tells us that the wave sound is a bit chattering, though.)
+
+
+- Simulated song spectrogram
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated-song_spectrogram.png"> 
 
 
+- Natural song spectrogram
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png"> 
+
+
+
 ## Discussion
 
-The next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
+The next step of this project would be:
+
+ 1. Investigating whether markov-chain structure in the generated song is similar to that in natural song.
+
+ 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
 
 
 # Copyright
 
-Implementation of Wavenet is done by [ibab](https://github.com/ibab). Thank you!!
+Implementation of Wavenet is done by [ibab](https://github.com/ibab).
 
 All rights reserved [shiba24](https://github.com/shiba24).
 
