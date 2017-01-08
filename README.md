@@ -122,10 +122,9 @@ And if it succeed, the next step of this project would be 1. Investigating wheth
 
 ### Training epoch
 
-
+After 2500 epoch, loss is about 1.5~2.0.
 
 ### Generated sound
-
 
 Listen at soundcloud https://soundcloud.com/shintaro-shiba/generated-bird-song-2
 
