@@ -67,12 +67,11 @@ You can listen to an example of sparrow's song [here](https://soundcloud.com/shi
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png" > 
 
 
-And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language.[Berwick et al, 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).
+And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language.[Berwick et al, 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039). Figures below explain song and its expression as finite-state.
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" width="400px" align="right" > 
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png"> 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png" width="400px"> 
-
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" > 
 
 (Both figures cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
 
@@ -109,8 +108,6 @@ As mentioned above, bird song itself is thought to have Markov-Model structure a
 
 If the mechanism should be similar between such birds and humans, WaveNet ([original blog](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) and [implementation of tensorflow](https://github.com/ibab/tensorflow-wavenet)) might be successful for simulating birdsong, because it is succssful in generating completely meaningless but locally speech-like sound waveform.
 
-And if it succeed, the next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
-
 
 ### A bit detailed settings
 
@@ -141,6 +138,7 @@ It is really like original (natural) song!! This is visualized image, or spectro
 
 ## Discussion
 
+The next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
 
 
 # Copyright
