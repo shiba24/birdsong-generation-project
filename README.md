@@ -62,16 +62,20 @@ Songbird is one of the most popular model animal for the neuroscientific studies
 
 ***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (called _syllable_ or _note_).
 
-You can listen to an example of sparrow's song [here](https://soundcloud.com/shintaro-shiba/javasong).
-
-This is visualized image, or spectrogram, of song.
+You can listen to an example of sparrow's song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of song.
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png" > 
 
 
-And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic.
+And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language.[Berwick et al, 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).
 
-(figure)
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song.png" width="400px"> 
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" width="400px" align="right" > 
+
+
+(Figure cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
 
 
 ### Brain structure
@@ -80,9 +84,11 @@ And interestingly, ***the song structure is expressed as Markov model***. The tr
 
 This figure is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature Rev. Neurosci.](http://www.nature.com/nrn/journal/v11/n11/execsumm/nrn2931.html)). The more detailed brain circuitry can be seen [here](http://web.williams.edu/Biology/Faculty_Staff/hwilliams/Finches/circuits.html) for example. 
 
-We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to _RA_, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling the birdsong and its neural mechanism.
+We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC are firing in turn like _chain_.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to _RA_, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling (even using neural network!) the birdsong and its neural mechanism. (For example, [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y))
 
-(figure)
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song_and_brain.png">
+
+(Figure cited from [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y), Fig. 1.)
 
 
 ### WaveNet
@@ -127,11 +133,11 @@ After 2500 epoch, loss is about 1.5~2.0.
 
 ### Generated sound
 
-Listen at soundcloud https://soundcloud.com/shintaro-shiba/generated-bird-song-2
+[Listen to generated song at soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2)
 
-This is visualized image, or spectrogram, of song.
+It is really like original (natural) song!! This is visualized image, or spectrogram, of song. (It tells us that the wave sound is a bit chattering, though.)
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated-song_spectrogram.png" > 
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated-song_spectrogram.png"> 
 
 
 ## Discussion
