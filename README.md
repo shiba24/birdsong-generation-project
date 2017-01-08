@@ -124,7 +124,7 @@ And if it succeed, the next step of this project would be 1. Investigating wheth
 ### Generated sound
 
 
-<body><embed src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated.wav" autoplay=false></body>
+<embed src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated.wav" autoplay=false>
 
 (image)
 
