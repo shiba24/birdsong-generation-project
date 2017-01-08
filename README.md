@@ -6,6 +6,21 @@ Birdsong generation project
 This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
 
 
+
+## Table of Contents
+ - [Quick execution](https://github.com/shiba24/birdsong-generation-project#quick-execution)
+     - [Requirements](https://github.com/shiba24/birdsong-generation-project#requirements)
+     - [Command](https://github.com/shiba24/birdsong-generation-project#command)
+ - [Overview](https://github.com/shiba24/birdsong-generation-project#overview)
+     - [Abstract](https://github.com/shiba24/birdsong-generation-project#abstract)
+     - [Background](https://github.com/shiba24/birdsong-generation-project#background)
+     - [About this project](https://github.com/shiba24/birdsong-generation-project#about-this-project)
+     - [Result](https://github.com/shiba24/birdsong-generation-project#result)
+     - [Discussion](https://github.com/shiba24/birdsong-generation-project#discussion)
+ - [Copyright](https://github.com/shiba24/birdsong-generation-project#copyright)
+
+
+
 # Quick execution
 
 ## Requirements
@@ -31,7 +46,6 @@ cd tensorflow-wavenet
 ython generate.py --wav_out_path=generated.wav --samples 32000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
 ```
 
-
 # Overview
 
 ## Abstract in one sentence
@@ -43,7 +57,7 @@ Simulate bird song with WaveNet.
 Songbird is one of the most popular model animal for the neuroscientific studies of human language, vocalization, and auditory prcessing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
 
 
-## Background: brief summary of previous research
+## Background
 
 ### Song structure
 
@@ -67,6 +81,15 @@ We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC a
 (figure)
 
 
+### WaveNet
+
+WaveNet is generative neural network for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) is published by Google DeepMind team in 2016. It uses dilated convolutional neural network to generate audio wave. 
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/wavenet.gif" width="400px">
+
+(GIf image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
+
+
 ## This project
 
 This project is only my own (not belonging to my supervisor). In one sentence: ***using WaveNet to simulate bird song.***
@@ -78,15 +101,34 @@ If the mechanism should be similar between such birds and humans, WaveNet ([orig
 And if it succeed, the next step of this project would be 1. Investigating whether markov-chain structure appears in the generated song, and 2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
 
 
+### A bit detailed settings
+
+<dl>
+  <dt>Datasize</dt>
+  <dd>??</dd>
+  <dt>Sampling rate</dt>
+  <dd>1.6 kHz</dd>
+  <dt>Other settings</dt>
+  <dd>will be here</dd>
+</dl>
+
+
 ## Result
 
+### Training epoch
+
+
+### Generated sound
+
+(image)
+
+
+## Discussion
 
 
 
+# Copyright
 
-
-
-
-
+All rights reserved [shiba24](https://github.com/shiba24). Any questions or comments are welcomed.
 
 
