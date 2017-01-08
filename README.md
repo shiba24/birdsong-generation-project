@@ -12,11 +12,12 @@ Birdsong generation project
  - [Quick execution](https://github.com/shiba24/birdsong-generation-project#quick-execution)
      - [Requirements](https://github.com/shiba24/birdsong-generation-project#requirements)
      - [Command](https://github.com/shiba24/birdsong-generation-project#command)
+     - [Generated song](https://github.com/shiba24/birdsong-generation-project#generated-song)
  - [Overview](https://github.com/shiba24/birdsong-generation-project#overview)
      - [Abstract](https://github.com/shiba24/birdsong-generation-project#abstract-in-one-sentence)
      - [Background](https://github.com/shiba24/birdsong-generation-project#background)
      - [About this project](https://github.com/shiba24/birdsong-generation-project#this-project)
-     - [Why is this interesting?](https://github.com/shiba24/birdsong-generation-project#why-is-this-interesting?)
+     - [Why is this interesting?](https://github.com/shiba24/birdsong-generation-project#why-is-this-interesting)
      - [Model configuration](https://github.com/shiba24/birdsong-generation-project#model-configuration)
      - [Result](https://github.com/shiba24/birdsong-generation-project#result)
      - [Discussion](https://github.com/shiba24/birdsong-generation-project#discussion)
@@ -50,9 +51,9 @@ ython generate.py --wav_out_path=generated.wav --samples 80000 logdir/train/{DAT
 ```
 
 
-## Result: generated song
+## Generated song
 
-You can listen to generated song [here](https://soundcloud.com/shintaro-shiba/generated-bird-song-2).
+You can listen to generated song at [soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2).
 
 
 # Overview
@@ -65,11 +66,11 @@ Simulate bird song with WaveNet.
 
 ### What is songbird?
 
-_Songbird_ is one of the best model animals for the neuroscientific studies of human language, vocalization, and auditory prcessing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to solve the question: _why only humans have language?_ and _what is the neural mechanism of language?_.
+**Songbird** is one of the best model animals for the neuroscientific studies of human language, vocalization, and auditory processing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to solve the questions: ***why only humans have language?*** and ***what is the neural mechanism of language?***.
 
 ### Song structure
 
-***Bird song*** is considered to have syntax like human language. Below is typical song structure of songbirds. We can see a bout of several song elements (called _syllable_ or _note_).
+Bird **song** is considered to have **syntax** like human language. Below is typical song structure of songbirds. We can see a bout of several song elements (called _syllable_ or _note_).
 
 You can listen to an example of java sparrow's (文鳥) song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of zebra finch's (錦華鳥) song. Alphabets on the spectrogram represent type of _note_. Both of java sparrow and zebra finch are songbirds.
 
@@ -77,7 +78,7 @@ You can listen to an example of java sparrow's (文鳥) song [here](https://soun
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png"> 
 
 
-And interestingly, ***the song structure is expressed as finite-state model***. The transition of _notes_ are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language ([Berwick et al., 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).) This is song expression as finite-state transition diagram. Line thickness represents the probability of transition from _note_ to _note_.
+And interestingly, ***the song structure is expressed as finite-state automaton model, which can be regarded as high-order Markov process***. The transition of _notes_ are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language ([Berwick et al., 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).) This is song expression as finite-state transition diagram. Line thickness represents the probability of transition from _note_ to _note_.
 
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" > 
@@ -113,14 +114,14 @@ There are many studies for modelling (even using neural network) the birdsong an
 
 ***WaveNet*** is generative neural network model for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) was published by Google DeepMind team in 2016. It uses _dilated convolutional neural network_ to generate audio wave. (Gif image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
 
-Inputs and outputs for the model are only waveform. **Hence this model itself does NOT assume that the syllables expressed with finite state, nor Markov chain.***
+Inputs and outputs for the model are only waveform. **Hence this model itself does NOT assume that the syllables expressed with finite state, nor Markov chain.**
 
 
 ## This project
 
 This project is only my own (not belonging to my supervisor), combining latest machine learning result and knowledge of neuroscience about songbirds.
 
-In one sentence: ***using WaveNet to simulate bird song.***
+In one sentence: **using WaveNet to simulate bird song.**
 
 As mentioned above, bird song itself is thought to have Markov-Model structure and syntax like human speech. However, song itself has no semantics.
 
@@ -129,7 +130,7 @@ If the mechanism should be similar between such birds and humans, WaveNet ([orig
 
 ## Why is this interesting?
 
-WaveNet itself doesn't use Markov property of song. It only uses information of raw waveform. Therefore, ***if WaveNet succeeds in generating birdsong:***
+WaveNet itself doesn't use Markov property of song. It only uses information of raw waveform. Therefore, **if WaveNet succeeds in generating birdsong:**
 
  1. WaveNet might have an ability to embed Markov property. This is not proved explicitly if we only generate human speech with this model.
 
