@@ -62,6 +62,8 @@ Songbird is one of the most popular model animal for the neuroscientific studies
 
 ***Birdsong*** is considered to have syntax like human language. This is typical song structure of songbirds. We can see bout of several song elements (called _syllable_ or _note_).
 
+You can listen to an example of sparrow's song [here](https://soundcloud.com/shintaro-shiba/javasong).
+
 (figure)
 
 And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic.
@@ -73,7 +75,7 @@ And interestingly, ***the song structure is expressed as Markov model***. The tr
 
 This is neural pathway of vocalization (cited from [Bouhuis et al. 2010, Nature Rev. Neurosci.](http://www.nature.com/nrn/journal/v11/n11/execsumm/nrn2931.html)). The more detailed brain circuitry can be seen [here](http://web.williams.edu/Biology/Faculty_Staff/hwilliams/Finches/circuits.html) for example. 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px">
+<img align="center" src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px">
 
 We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC are firing in turn like Markov-chain.*** Each neuron shows activity phase-locked to the song, regulating the timing of each song element. HVC neurons are projecting to _RA_, motor area, and RA outputs motor signal to mustles of vocal organ for the generation of song element. There are many studies for modelling the birdsong and its neural mechanism.
 
@@ -84,7 +86,7 @@ We can see there is brain part called _HVC_, pre-motor area. ***Neurons in HVC a
 
 WaveNet is generative neural network for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) is published by Google DeepMind team in 2016. It uses dilated convolutional neural network to generate audio wave. 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/wavenet.gif" width="400px">
+<img align="center" src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/wavenet.gif" width="400px">
 
 (GIf image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
 
