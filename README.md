@@ -64,7 +64,10 @@ Songbird is one of the most popular model animal for the neuroscientific studies
 
 You can listen to an example of sparrow's song [here](https://soundcloud.com/shintaro-shiba/javasong).
 
-(figure)
+This is visualized image, or spectrogram, of song.
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png" > 
+
 
 And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic.
 
@@ -126,7 +129,9 @@ After 2500 epoch, loss is about 1.5~2.0.
 
 Listen at soundcloud https://soundcloud.com/shintaro-shiba/generated-bird-song-2
 
-(image)
+This is visualized image, or spectrogram, of song.
+
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated-song_spectrogram.png" > 
 
 
 ## Discussion
