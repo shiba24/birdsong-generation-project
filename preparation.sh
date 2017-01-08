@@ -16,26 +16,20 @@ go get github.com/google/skicka
 skicka init
 skicka -no-browser-auth ls
 
-
 ### downlaod data
 cd birdsong-generation-project/
-mkdir data
 skicka download java_song data/
-
 
 ### install dependencies for wave resample
 pip install --user --upgrade pip
 pip install --user -r requirements.txt
 
-
 ### resampling data
-mkdir corpus
 python resample.py -s data -d corpus
-
 
 ### clone tensorflow and install dependencies
 git clone https://github.com/ibab/tensorflow-wavenet.git
 cd tensorflow-wavenet
 pip install --user -r requirements.txt
-
+cd ..
 

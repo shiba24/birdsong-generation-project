@@ -15,18 +15,20 @@ Birdsong generation project
 - [wavenet-tensorflow](https://github.com/ibab/tensorflow-wavenet) (installed in the script)
 
 
-## Preparetion
+## Command
 
 ```
+# preparation
 git clone https://github.com/shiba24/birdsong-generation-project.git
 bash preparation.sh
-```
 
-## Training 
-
-```
-cd tensorflow-wavenet 
+# training  
+cd tensorflow-wavenet
 python train.py --data_dir=../corpus
+
+# generation
+cd tensorflow-wavenet
+python generate.py  --samples 16000 model.ckpt-XXXX
 ```
 
 

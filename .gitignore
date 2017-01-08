@@ -1,5 +1,12 @@
 .*
 !.gitignore
 data/*
+!data/.gitkeep
+
 corpus/*
+!corpus/.gitkeep
+
+result/*
+!result/.gitkeep
+
 tensorflow-wavenet/*
