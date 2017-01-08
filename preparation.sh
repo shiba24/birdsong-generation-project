@@ -4,10 +4,10 @@ sudo tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 # mkdir ~/go
 # mkdir ~/go/bin
-mkdir ~/work
+mkdir ~/work/go
 # export GOROOT=$HOME/go
 # export PATH=$PATH:$GOROOT/bin
-export GOPATH=$HOME/work
+export GOPATH=$HOME/work/go
 export PATH=$PATH:$GOPATH/bin
 
 
