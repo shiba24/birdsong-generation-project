@@ -69,10 +69,10 @@ You can listen to an example of sparrow's song [here](https://soundcloud.com/shi
 
 And interestingly, ***the song structure is expressed as Markov model***. The transition of notes are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language.[Berwick et al, 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).
 
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" width="400px" align="right" > 
+
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song.png" width="400px"> 
-
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" width="400px" align="right" > 
 
 
 (Figure cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
