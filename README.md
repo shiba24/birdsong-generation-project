@@ -6,7 +6,6 @@ Birdsong generation project
 This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
 
 
-
 ## Table of Contents
  - [Quick execution](https://github.com/shiba24/birdsong-generation-project#quick-execution)
      - [Requirements](https://github.com/shiba24/birdsong-generation-project#requirements)
@@ -89,10 +88,14 @@ WaveNet is generative neural network for raw audio file. [The original paper](ht
 
 (GIf image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
 
+Inputs and outputs for the model are only wave. This model itself does ***NOT*** assume that the syllables expressed with Markov model.
+
 
 ## This project
 
-This project is only my own (not belonging to my supervisor). In one sentence: ***using WaveNet to simulate bird song.***
+This project is only my own (not belonging to my supervisor), combining latest machine learning result and knowledge of neuroscience about songbirds.
+
+In one sentence: ***using WaveNet to simulate bird song.***
 
 As mentioned above, bird song itself is thought to have Markov-Model structure and syntax like human speech. However, song itself has no semantics.
 
@@ -120,6 +123,9 @@ And if it succeed, the next step of this project would be 1. Investigating wheth
 
 ### Generated sound
 
+
+<body><embed src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated.wav" autoplay=false></body>
+
 (image)
 
 
@@ -129,6 +135,12 @@ And if it succeed, the next step of this project would be 1. Investigating wheth
 
 # Copyright
 
-All rights reserved [shiba24](https://github.com/shiba24). Any questions or comments are welcomed.
+Implementation of Wavenet is done by [ibab](https://github.com/ibab). Thank you!!
 
+All rights reserved [shiba24](https://github.com/shiba24).
+
+ - Started this project November 2016.
+ - Updated January 2017.
+
+Any questions or comments are welcomed! Thank you.
 
