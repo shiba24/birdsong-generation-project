@@ -71,11 +71,10 @@ And interestingly, ***the song structure is expressed as Markov model***. The tr
 
 <img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" width="400px" align="right" > 
 
+<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png" width="400px"> 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song.png" width="400px"> 
 
-
-(Figure cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
+(Both figures cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
 
 
 ### Brain structure
