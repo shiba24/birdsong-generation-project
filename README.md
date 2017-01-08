@@ -121,10 +121,11 @@ And if it succeed, the next step of this project would be 1. Investigating wheth
 ### Training epoch
 
 
+
 ### Generated sound
 
 
-<embed src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated.wav" autoplay=false>
+Listen at soundcloud https://soundcloud.com/shintaro-shiba/generated-bird-song-2
 
 (image)
 

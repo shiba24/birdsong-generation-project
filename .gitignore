@@ -7,6 +7,10 @@ corpus/*
 !corpus/.gitkeep
 
 result/*
+!result/model
 !result/.gitkeep
+
+result/model/*
+!result/model/.gitkeep
 
 tensorflow-wavenet/*
