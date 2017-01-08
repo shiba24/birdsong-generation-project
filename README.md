@@ -3,7 +3,7 @@ Birdsong generation project
 
 # Notice
 
-[WIP] The dataset is not open-access yet. Hense you cannot replicate this project on your own.
+This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
 
 
 # Quick execution
@@ -12,8 +12,8 @@ Birdsong generation project
 
 - golang 1.7.3+
 - python 2.7.11
-- [wavenet-tensorflow](https://github.com/ibab/tensorflow-wavenet) (installed in the script)
-
+- [wavenet-tensorflow](https://github.com/ibab/tensorflow-wavenet) (automatically clone in the script)
+- GPU (recommended)
 
 ## Command
 
@@ -28,15 +28,19 @@ python train.py --data_dir=../corpus
 
 # generation
 cd tensorflow-wavenet
-python generate.py  --samples 16000 model.ckpt-XXXX
+ython generate.py --wav_out_path=generated.wav --samples 32000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
 ```
 
 
 # Overview
 
+## Abstract in one sentence
+
+Simulate bird song with WaveNet.
+
 ## Why birdsong?
 
-Songbird is one of the most popular model animal for the studies of human language, vocalization, and auditory prcessing. Many laboratories around the world (actually many top universities in the US have songbird lab) in neurosciene including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
+Songbird is one of the most popular model animal for the neuroscientific studies of human language, vocalization, and auditory prcessing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to investigate why only humans have language and what is the mechanism of language.
 
 
 ## Background: brief summary of previous research
