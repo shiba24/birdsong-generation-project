@@ -47,13 +47,15 @@ python train.py --data_dir=../corpus
 
 # generation
 cd tensorflow-wavenet
-ython generate.py --wav_out_path=generated.wav --samples 80000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
+python generate.py --wav_out_path=generated.wav --samples 80000 logdir/train/{DATE_HERE}/model.ckpt-{XXX}
 ```
 
 
 ## Generated song
 
-You can listen to generated song at [soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2).
+[Listen to natural song at soundcloud](https://soundcloud.com/shintaro-shiba/javasong)
+
+[Listen to generated song at soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2)
 
 
 # Overview
@@ -184,6 +186,11 @@ The next step of this project would be:
  1. Investigating whether markov-chain structure in the generated song is similar to that in natural song.
 
  2. Comparing neural firing patterns known-to-date and activated neuron pattern in the model.
+
+
+### TODOs
+
+ - generate other species songs (e.g. finches, canaries, ...)
 
 
 # Copyright
