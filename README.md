@@ -68,7 +68,7 @@ Simulate bird song with WaveNet.
 
 ### What is songbird?
 
-**Songbird** is one of the best model animals for the neuroscientific studies of human language, vocalization, and auditory processing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to solve the questions: ***why only humans have language?*** and ***what is the neural mechanism of language?***.
+**Songbird** is one of the best model animals for the neuroscientific studies of human language, vocalization, and auditory processing. Many laboratories around the world including molecular biology, physiology, acoustics, and ethology, are using songbird to answer the questions: ***why only humans have language?*** and ***what is the neural mechanism of language?***.
 
 ### Song structure
 
