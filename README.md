@@ -3,7 +3,7 @@ Birdsong generation project
 
 # Notice
 
- - This project is work-in-process. The dataset is not open-access yet. Hense you cannot replicate this project.
+ - The dataset is not open-access yet. Hense you cannot replicate this project.
 
  - This project is only my own, not belonging to my supervisor. All the mistakes and misunderstandings belong to myself.
 
