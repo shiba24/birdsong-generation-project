@@ -3,10 +3,11 @@ Birdsong generation project
 
 # Notice
 
- - The dataset is not open-access yet. Hense you cannot replicate this project.
+ - The dataset is not open-access yet. Hense you cannot reproduce this project.
 
  - This project is only my own, not belonging to my supervisor. All the mistakes and misunderstandings belong to myself.
 
+ - If you are interested in this project (e.g. furthe questions, reproduce, comments and/or feedbacks), feel free to contact [me](https://github.com/shiba24)!
 
 ## Table of Contents
  - [Quick execution](https://github.com/shiba24/birdsong-generation-project#quick-execution)
