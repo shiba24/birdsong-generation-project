@@ -1,8 +1,6 @@
 Birdsong generation project
 ====
 
-### About
-
 Generating birdsongs with Wavenet!
 
 <img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/bolhuis_2010_fig1.png" width="400px" align="right">
@@ -11,6 +9,9 @@ Generating birdsongs with Wavenet!
 [Listen to natural song at soundcloud](https://soundcloud.com/shintaro-shiba/javasong)
 
 [Listen to generated song at soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2)
+
+
+
 
 
 # Table of Contents
