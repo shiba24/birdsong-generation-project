@@ -3,10 +3,11 @@ Birdsong generation project
 
 # Notice
 
- - The dataset is not open-access yet. Hense you cannot replicate this project.
+ - The dataset is not open-access yet. Hense you cannot reproduce this project.
 
  - This project is only my own, not belonging to my supervisor. All the mistakes and misunderstandings belong to myself.
 
+ - If you are interested in this project (e.g. furthe questions, reproduce, comments and/or feedbacks), feel free to contact [me](https://github.com/shiba24)!
 
 ## Table of Contents
  - [Quick execution](https://github.com/shiba24/birdsong-generation-project#quick-execution)
@@ -72,7 +73,7 @@ Simulate bird song with WaveNet.
 
 ### Song structure
 
-Bird **song** is considered to have **syntax** like human language. Below is typical song structure of songbirds. We can see a bout of several song elements (called _syllable_ or _note_).
+Bird **song** is considered to have **syntax** like human language, although it does **not** have **semantics** within itself. In most species in songbirds only male sings while few species both sexes sing. One function of their song is considered to be sexual attraction to females. Below is typical song structure of songbirds. We can see a bout of several song elements (called _syllable_ or _note_).
 
 You can listen to an example of java sparrow's (文鳥) song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of zebra finch's (錦華鳥) song. Alphabets on the spectrogram represent type of _note_. Both of java sparrow and zebra finch are songbirds.
 
