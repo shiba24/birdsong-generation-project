@@ -29,7 +29,10 @@ python resample.py -s data -d corpus
 
 ### clone tensorflow and install dependencies
 git clone https://github.com/ibab/tensorflow-wavenet.git
+git checkout b88b5ed95ff51dcb4d4a243fd7747e6f88c16cde
+# 23d88970be6a109717dab04300afe4d6b26841af       # back to stable version
 cd tensorflow-wavenet
 pip install --user -r requirements.txt
+pip install --user -U -r requirements.txt
 cd ..
 

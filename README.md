@@ -77,13 +77,12 @@ Bird **song** is considered to have **syntax** like human language. Below is typ
 You can listen to an example of java sparrow's (文鳥) song [here](https://soundcloud.com/shintaro-shiba/javasong). This is visualized image, or spectrogram, of zebra finch's (錦華鳥) song. Alphabets on the spectrogram represent type of _note_. Both of java sparrow and zebra finch are songbirds.
 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song-label.png"> 
-
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/song-label.png"> 
 
 And interestingly, ***the song structure is expressed as finite-state automaton model, which can be regarded as high-order Markov process***. The transition of _notes_ are probablistic, and song is expressed as probabilistic finite-state transition diagram. This is considered to be in parallel with human language ([Berwick et al., 2011](http://www.sciencedirect.com/science/article/pii/S1364661311000039).) This is song expression as finite-state transition diagram. Line thickness represents the probability of transition from _note_ to _note_.
 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/finite-state.png" > 
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/finite-state.png" > 
 
 (Both figures cited from [Honda & Okanoya, 1999](http://www.bioone.org/doi/abs/10.2108/zsj.16.319))
 
@@ -91,7 +90,7 @@ And interestingly, ***the song structure is expressed as finite-state automaton 
 ### Brain structure
 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/bolhuis_2010_fig1.png" width="400px" align="right">
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/bolhuis_2010_fig1.png" width="400px" align="right">
 
 
 Many researchers approached what is the neural mechanism enabling finite-state vocalization. And one hypothesis is _Markov chain-like representation_ within neurons in the motor areas.
@@ -102,7 +101,7 @@ We can see there is a brain region named _HVC_ (proper name), which is _pre-moto
 The next figure (a) is another expression of finite-state transition of song. And (b) is a simple model of _HVC_ and _RA_ neurons. The hypothesis assumes ***neurons in HVC are firing in turn like _chain_.*** (Cited from [Katahira et al, 2007](http://link.springer.com/article/10.1007/s00422-007-0184-y))
 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/song_and_brain.png">
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/song_and_brain.png">
 
 
 There are many studies for modelling (even using neural network) the birdsong and its neural mechanism.
@@ -111,7 +110,7 @@ There are many studies for modelling (even using neural network) the birdsong an
 ### WaveNet
 
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/wavenet.gif" width="400px" align="right">
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/wavenet.gif" width="400px" align="right">
 
 
 ***WaveNet*** is generative neural network model for raw audio file. [The original paper](https://arxiv.org/pdf/1609.03499.pdf) was published by Google DeepMind team in 2016. It uses _dilated convolutional neural network_ to generate audio wave. (Gif image cited from [Blog post of DeepMind](https://deepmind.com/blog/wavenet-generative-model-raw-audio/))
@@ -170,12 +169,12 @@ It sounds like original (natural) song!! This is visualized image, or spectrogra
 
 - Simulated song spectrogram
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/generated-song_spectrogram.png"> 
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/generated-song_spectrogram.png"> 
 
 
 - Natural song spectrogram
 
-<img src="https://github.com/shiba24/birdsong-generation-project/blob/master/images/javasong_spectrogram.png"> 
+<img src="https://github.com/shiba24/birdsong-generation-project/raw/master/images/javasong_spectrogram.png"> 
 
 
 
