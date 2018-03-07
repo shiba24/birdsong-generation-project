@@ -9,8 +9,6 @@ Generating birdsongs with Wavenet!
 [Listen to natural song at soundcloud](https://soundcloud.com/shintaro-shiba/javasong)
 
 [Listen to generated song at soundcloud](https://soundcloud.com/shintaro-shiba/generated-bird-song-2)
-
-
 ====
 
 
