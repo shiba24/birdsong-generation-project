@@ -210,7 +210,7 @@ The next step of this project would be:
 
 Implementation of Wavenet is done by [ibab](https://github.com/ibab).
 
-All rights reserved [shiba24](https://github.com/shiba24).
+All rights reserved [Shintaro Shiba](http://shibashintaro.com/).
 
  - Started this project November 2016.
  - Updated January 2017.
